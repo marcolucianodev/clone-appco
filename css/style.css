@@ -13,7 +13,7 @@ body {
     box-sizing: border-box;
 }
 
-header {
+/*header {
     display: grid;
     grid-template-columns: auto;
     background-image:url('../images/app-hero-bg.jpg');
@@ -209,12 +209,12 @@ input#email {
     width: 100%;
     position: absolute;
     bottom: -42px;
-}
+}*/
 
 /*RESPONSIVO*/
 
 
-@media (max-width: 878px) {
+/*@media (max-width: 878px) {
     .header-headline {
         display: block;
         z-index: 1;
@@ -282,4 +282,217 @@ input#email {
     .menu-opened {
         display:none;
     }
+}*/
+
+header {
+    display:flex;
+    width: 100vw;
+    background-color: red;
+    flex-direction: column;
+    background-image:url('../images/app-hero-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
+
+.bg-header::before {
+    background-image: linear-gradient(to right, rgba(32, 40, 119, 0.95), rgba(55, 46, 149, 0.95), rgba(83, 49, 177, 0.90), rgba(114, 48, 205, 0.85), rgba(150, 41, 230, 0.95));;
+    position:absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/*.headerArea {
+    display:flex;
+    justify-content: space-between;
+    margin: auto;
+    background-color: blue;
+    width: 100%;
+    align-items: center;
+    padding: 10px 2%;
+    height: 65px;
+}*/
+
+.headerArea {
+    display: flex;
+    width: 100vw;
+    background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1));;
+    padding: 10px 2%;
+    height: 65px;
+    position: sticky;
+    top:0;
+    left: 0;
+    right: 0;
+}
+
+.container-headerArea {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1080px;
+    width: 100%;
+    margin:auto;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 5%;
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav.menu a {
+    color:#FFF;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.menuToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    display: none;
+}
+
+.menuToggle img {
+    width: 40px;
+}
+
+section.container {
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+}
+
+section.headline {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.first-headline {
+    padding: 15px;
+    z-index: 1;
+    padding-bottom: 60px;
+}
+
+.first-headline h1 {
+    font-family: var(--fonteTitulos);
+    font-weight: 700;
+    font-size: 42px;
+    color: #FFFFFF;
+    padding-bottom: 20px;
+    padding-top: 100px;
+}
+
+.first-headline h2 {
+    font-weight: 300;
+    color:#FFFFFF;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.form-headline {
+    display:flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+input#email {
+    padding: 25px 20px;
+    border-radius: 50px;
+    outline: none;
+    color: #737373;
+    border: none;
+    width: 70%;
+    font-size: 18px;
+}
+
+.form-headline button {
+    padding: 20px;
+    margin-left: -124px;
+    border-radius: 40px;
+    border: none;
+    background-color: #6730E3;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.call-action-video-headline {
+    display: flex;
+    align-items: center;
+}
+
+.btn-video {
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+.btn-video img {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+.call-action-video-headline-desc {
+    color:#FFFFFF;
+}
+
+.second-headline {
+    z-index: 1;
+    padding-top: 65px;
+    /*padding-left: 30px;
+    padding-right: 30px;*/
+}
+
+.second-headline img {
+    width: 400px;
+}
+
+.header-bg-bottom img {
+    width: 100%;
+    position: absolute;
+    bottom: -22px;
+}
+
+
+
+
+/*RESPONSIVO*/
+
+@media (max-width: 960px){
+    nav.menu {
+        position: absolute;
+        top:65px;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1));;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav.menu a {
+        padding: 1%;
+    }
+
+    .menuToggle {
+        display: block;
+    }
+}
+

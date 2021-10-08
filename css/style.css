@@ -363,11 +363,37 @@ nav.menu a {
     align-items: center;
     margin-right: 5%;
     display: none;
+    cursor: pointer;
 }
 
 .menuToggle img {
     width: 40px;
 }
+
+.menuMobile {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1));;
+    display:none;
+}
+
+.menuMobile a {
+    padding:1%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.menuMobile a:last-child {
+    padding-bottom: 2%;
+}
+
 
 section.container {
     max-width: 1080px;
@@ -477,6 +503,11 @@ input#email {
 /*RESPONSIVO*/
 
 @media (max-width: 960px){
+    .headerArea {
+        z-index: 2;
+        position: static;
+    }
+    
     nav.menu {
         position: absolute;
         top:65px;
@@ -485,14 +516,65 @@ input#email {
         background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1));;
         flex-direction: column;
         text-align: center;
+        display: none;
     }
 
     nav.menu a {
         padding: 1%;
     }
 
+    .menu-hide {
+        display:none;
+    }
+    
+    .menu-show {
+        display: flex;
+    }
+
     .menuToggle {
         display: block;
+    }
+
+    section.headline {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-headline {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .form-headline button {
+        margin:auto;
+        margin-top:20px;
+    }
+
+    .call-action-video-headline {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .call-action-video-headline {
+        flex-direction: column;
+    }
+
+    .call-action-video-headline a {
+        display: flex;
+        order: 1;
+        margin-top: 20px;
+    }
+
+    input#email,
+    .form-headline button {
+        width: 100%;
+    }
+
+    .second-headline {
+        padding-top: 0px;
     }
 }
 

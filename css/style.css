@@ -15,7 +15,7 @@ body {
 
 header {
     display:flex;
-    width: 100vw;
+    width: 100%;
     background-color: red;
     flex-direction: column;
     background-image:url('../images/app-hero-bg.jpg');
@@ -36,7 +36,7 @@ header {
 
 .headerArea {
     display: flex;
-    width: 100vw;
+    width: 100%;
     background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1));;
     padding: 10px 2%;
     height: 65px;
@@ -371,6 +371,10 @@ section.first-area h3 {
 
     .second-headline {
         padding-top: 0px;
+    }
+
+    .second-headline img {
+        width:380px;
     }
 }
 

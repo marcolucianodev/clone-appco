@@ -500,6 +500,7 @@ section.price-area p {
     line-height: 30px;
     max-width: 800px;
     margin: 0 auto;
+    color: #707070;
 }
 
 .prices-area {
@@ -639,14 +640,326 @@ section.area-info {
     border-top: none;
 }
 
+section.clients-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding:0 2%;
+    padding-bottom: 40px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
 
+.clients-area-left {
+    padding: 0 2%;
+}
 
+.clients-area h1 {
+    font-size: 35px;
+    font-family: var(--fonteTitulos);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
 
+.clients-area p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #707070;
+}
 
+.clients-brands {
+    display: flex;
+    align-items: center;
+}
 
+.clients-brands li {
+    list-style: none;
+    display: inline-flex;
+    margin-right: 20px;
+}
 
+.clients-brands img {
+    width: 102px;
+}
 
+.clients-area-right {
+    display: flex;
+    flex-direction: column;
+    padding: 0 3%;
+    justify-content: flex-end;
+}
 
+.client-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.client-header img {
+    width: 67px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.clients-name {
+    font-family: var(--fonteTitulos);
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.clients-company {
+    font-size: 15px;
+    font-weight: bold;
+    color: #707070;
+}
+
+.clients-testemonial {
+ color: #707070;
+ margin-bottom: 20px;
+ line-height: 25px;
+}
+
+.clients-testemonial img {
+    width: 17px;
+    margin-right: 10px;
+}
+
+.arrows {
+    display: flex;
+}
+
+.arrow-prev {
+    margin-right: 3px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 15px;
+    border: 1px solid #ebebeb;
+    background-color: transparent;
+}
+
+.arrow-prev:hover {
+    background-color: #6730E3;
+    color: #FFFFFF;
+}
+
+.arrow-next {
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 15px;
+    border: 1px solid #ebebeb;
+    background-color: transparent;
+}
+
+.arrow-next:hover {
+    background-color: #6730E3;
+    color: #FFFFFF;
+}
+
+section.main-video {
+    display: grid;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url("../images/hero-bg-1.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.bg-main-video::before {
+    background-image: linear-gradient(to right, rgba(32, 40, 119, 0.95), rgba(55, 46, 149, 0.95), rgba(83, 49, 177, 0.90), rgba(114, 48, 205, 0.85), rgba(150, 41, 230, 0.95));;
+    position:absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.main-video-area {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.main-video-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-video-player .btn-video {
+    margin-bottom: 20px;
+}
+
+.main-video-player .call-action-video-headline-desc {
+    font-family: var(--fontContent);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+section.our-team-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2%;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+section.our-team-area h2 {
+    font-family: var(--fonteTitulos);
+    font-size: 40px;
+    font-weight: 600;
+    max-width: 700px;
+    margin:0 auto;
+    margin-bottom: 20px;
+}
+
+section.our-team-area p {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #707070;
+}
+
+.our-team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.our-team li {
+    list-style: none;
+    display:inline-flex;
+    margin-right: 15px;
+    position: relative;
+}
+
+.our-team img {
+    width: 230px;
+    border-radius: 50%;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgba(32, 40, 119, 0.95), rgba(55, 46, 149, 0.95), rgba(83, 49, 177, 0.90), rgba(114, 48, 205, 0.85), rgba(150, 41, 230, 0.95));;
+    position: absolute;
+    border-radius: 50%;
+    color: #FFF;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.team-info:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+.team-info p {
+    font-size: 14px !important;
+    line-height: normal !important;
+    margin-bottom: 20px !important;
+    margin-top:10px;
+    color: #FFF !important;
+}
+
+section.news-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    padding:0 2%;
+}
+
+section.news-area h2 {
+    font-family: var(--fonteTitulos);
+    font-size: 40px;
+    font-weight: 600;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+section.news-area p {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 800px;
+    color: #707070;
+    margin-bottom: 30px;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+}
+
+.box-news {
+   display: flex;
+   flex-direction: column;
+   box-shadow:1px 1px 20px 4px rgba(0, 0, 0, 0.12);
+   border-top-right-radius: 5px;
+   border-top-left-radius: 15px;
+}
+
+.box-news img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.post-data {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.post-info {
+    font-size: 12px;
+    color: #707070;
+    margin-bottom: 10px;
+}
+
+.post-info span {
+    margin-right: 10px;
+}
+
+.post-title {
+    font-size: 18px;
+    font-family: var(--fonteTitulos);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.post-resume {
+    font-size: 15px;
+    color: #707070;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.read-more a {
+    font-size: 14px;
+    font-family: var(--fontContent);
+    font-weight: bolder;
+    text-decoration: none;
+    color: #495057;
+}
+
+span.arrow-right{
+    transform: rotate(180deg);
+}
 
 
 

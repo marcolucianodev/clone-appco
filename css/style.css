@@ -961,6 +961,146 @@ span.arrow-right{
     transform: rotate(180deg);
 }
 
+section.contact-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 9% 2%;
+    background-color: #f4f7fa;
+}
+
+.content-inside-contact {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+}
+
+.contact-area-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-area-left h2 {
+    font-family: var(--fonteTitulos);
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-area-left p {
+    line-height: 30px;
+    color: #707070;
+    margin-bottom: 20px;
+}
+
+.contact-area-left a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-area-right {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.contact-area-right h4 {
+    margin-bottom: 15px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.formName {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+input[type='text']#name,
+input[type='text']#company,
+input[type='email']#email2,
+input[type='tel']#phone,
+textarea#message {
+    padding:20px;
+    width: 100%;
+    border:1px solid #ced4da;
+    outline: none;
+    color: #495057;
+}
+
+input[type='text']#name::placeholder,
+input[type='text']#company::placeholder,
+input[type='email']#email2::placeholder,
+input[type='tel']#phone::placeholder,
+textarea#message::placeholder {
+    font-size: 15px;
+}
+
+input[type='text']#name:focus,
+input[type='text']#company:focus,
+input[type='email']#email2:focus,
+input[type='tel']#phone:focus,
+textarea#message:focus{
+    border:1px solid #6730E3;
+    box-shadow: none;
+}
+
+textarea#message {
+    resize: none;
+    font-family: var(--fontContent);
+}
+
+#btn-send {
+    border: none;
+    padding:15px 20px;
+    font-size: 15px;
+    border-radius: 30px;
+    color: #FFF;
+    background-color: #9629e6;
+    margin-top: 20px;
+}
+
+.formEmail {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.formPhone {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.formCompany {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.formMessage {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.formSend {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

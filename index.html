@@ -8,9 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="bg-modal">
+        <div class="modal">
+            <span class="close" onclick="fecharModal()">&times;</span>
+        </div>
+    </div>
    <header class="bg-header">
        <div class="headerArea">
            <div class="container-headerArea">
@@ -52,7 +58,7 @@
                 </h1>
                 <h2>Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</h2>
                 <form class="form-headline">
-                    <label for="email"></label>
+                    <!--<label for="email"></label>-->
                     <input type="email" id="email" placeholder="info@yourdomain.com">
                     <button>Subscribe</button>
                 </form>
@@ -83,17 +89,24 @@
             <h3>Following reasons show advantages of adding AppCo to your lead pages, demos and checkouts evisculate interoperable imperatives rather.</h3>
             <div class="features-box-area">
                 <div class="feature-boxes">
-                    <img src="images/promo-icon-bg.svg" alt="">
+                    <!--<img src="images/promo-icon-bg.svg" alt="">-->
+                    <div class="feature-box-icon">
+                        <i class="fas fa-bezier-curve"></i>
+                    </div>
                     <p class="txt-bold">Clean Design</p>
                     <p class="txt-desc">Increase sales by showing true dynamics of your website.</p>
                 </div>
                 <div class="feature-boxes">
-                    <img src="images/promo-icon-bg.svg" alt="">
+                    <div class="feature-box-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
                     <p class="txt-bold">Secure Data</p>
                     <p class="txt-desc">Build your online store’s trust using Social Proof & Urgency.</p>
                 </div>
                 <div class="feature-boxes">
-                    <img src="images/promo-icon-bg.svg" alt="">
+                    <div class="feature-box-icon">
+                        <i class="far fa-eye"></i>
+                    </div>
                     <p class="txt-bold">Retina Ready</p>
                     <p class="txt-desc">Realize importance of social proof in customer’s purchase decision.</p>
                 </div>
@@ -354,7 +367,7 @@
         <div class="container-inside main-video-area">
             <div class="main-video-player">
                 <a href="">
-                    <div class="btn-video">
+                    <div class="btn-video" onclick="abrirModal()">
                         <img src="images/control-play-blue.png" alt="">
                     </div>
                 </a>
@@ -516,6 +529,104 @@
         </div>
 
     </section>
+
+    <section class="partners container">
+
+        <div class="partners-headline">
+            <h2>Trusted by Companies</h2>
+            <p>Rapidiously morph transparent internal or "organic" sources whereas resource sucking e-business. Conveniently innovate compelling internal.</p>
+            </div>
+        <div class="companies-partners">
+            <ul>
+                <li><img src="images/client-1-color.png" alt=""></li>
+                <li><img src="images/client-2-color.png" alt=""></li>
+                <li><img src="images/client-3-color.png" alt=""></li>
+                <li><img src="images/client-4-color.png" alt=""></li>
+                <li><img src="images/client-5-color.png" alt=""></li>
+                <li><img src="images/client-6-color.png" alt=""></li>
+                <li><img src="images/client-7-color.png" alt=""></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="subscribe">
+        <div class="content-inside-subscribe">
+            <form class="form-subscribe">
+                <input type="email" id="email" placeholder="info@yourdomain.com">
+                <button type="submit">Subscribe</button>
+            </form>
+            
+        </div>
+        
+    </section>
+
+    <footer class="footer-area">
+        <img src="images/footer-top-shape.png" class="footer-shape">
+        <div class="content-inside-footer">
+            <div class="footer-area1">
+                <img src="images/logo-white-1x.png" alt="">
+                <p>Holisticly empower premium architectures without value-added ideas. Seamlessly evolve cross-platform experiences.</p>
+                <div class="footer-icons">
+                    ...
+                </div>
+            </div>
+            <div class="footer-area2">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Live Support</a></li>
+                    <li><a href="">Open Sources</a></li>
+                    <li><a href="">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="footer-area3">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Customers</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-area4">
+                <h3>Location</h3>
+                <div class="adreess">
+                    <div class="icon"></div>
+                    <div class="desc-adreess">
+                        <p>121 King Melbourne</p>
+                        <p>Australia 30000</p>
+                    </div>
+                </div>
+                <div class="phone">
+                    <p>+61 2 8376 6284</p>
+                </div>
+                <div class="email">
+                    <p>mail@example.com</p>
+                </div>
+                <div class="url">
+                    www.yourdomain.com
+                </div>
+            </div>
+        </div>
+        <div class="top-line"></div>
+        <section class="footer-copy">
+            <div class="container">
+                <div class="copy">
+                    &copy; Desenvolvido por Marco Luciano
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="">Terms</a></li>
+                        <li><a href="">Security</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </footer>
 
 <script src="js/script.js"></script>
 </body>

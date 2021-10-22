@@ -20,28 +20,29 @@ body {
     position: fixed;
     z-index: 999;
     top: -100%;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 1s;
 }
 
 .modal {
     width: 60%;
     height: 50%;
-    background-color: #FFFFFF;
-    border: 1px solid #000;
-    margin:20% auto;
 }
 
 span.close {
     float: right;
     font-size: 22px;
-    color: #000;
+    color: #FFFFFF;
     margin: 10px 20px;
     cursor: pointer;
+    padding:2px 8px;
 }
 
 span.close:hover {
-    color: #990000;
+    background-color: #FF0000;
+    padding:2px 8px;
 }
 
 header {
@@ -134,7 +135,7 @@ nav.menu a {
 }
 
 .menuMobile a {
-    padding:1%;
+    padding:2%;
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -222,6 +223,7 @@ input#email {
     border-radius: 50%;
     margin-right: 10px;
     position: relative;
+    cursor:pointer;
 }
 
 .btn-video img {
@@ -300,6 +302,11 @@ section.first-area h3 {
     padding: 30px;
     box-shadow:1px 1px 20px 4px rgba(0, 0, 0, 0.12);
     border-radius: 20px;
+    transition: 400ms;
+}
+
+.feature-boxes:hover {
+    transform: translateY(-10px);
 }
 
 .feature-box-icon {
@@ -490,13 +497,18 @@ section.download-area {
 .btn-google,
 .btn-apple {
     padding: 15px 20px;
-    width: 150px;
+    width: 160px;
     font-size: 17px;
     border-radius: 30px;
     border:none;
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
+}
+
+.btn-google i,
+.btn-apple i {
+    margin-right: 5px;
 }
 
 .btn-google {
@@ -675,6 +687,14 @@ section.area-info {
 .question {
     padding: 20px;
     border: 1px solid #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span.plus {
+    color: #9629e6;
+    cursor: pointer;
 }
 
 .question h6 {
@@ -682,6 +702,12 @@ section.area-info {
     font-weight: 600;
     font-size: 15px;
     color:#707070;
+}
+
+.question h6 i {
+    color: #9629e6;
+    display:inline-block;
+    margin-right: 10px;
 }
 
 .answer {
@@ -927,6 +953,10 @@ section.our-team-area p {
     color: #FFF !important;
 }
 
+.team-social a {
+    color:#FFFFFF;
+}
+
 section.news-area {
     display: grid;
     grid-template-columns: 1fr;
@@ -1011,7 +1041,14 @@ section.news-area p {
 }
 
 span.arrow-right{
-    transform: rotate(180deg);
+    transition: 500ms;
+    display: inline-block;
+}
+
+.read-more a:hover,
+span.arrow-right:hover {
+    color: #6730E3;
+    transform: translateX(5px);
 }
 
 section.contact-area {
@@ -1289,6 +1326,16 @@ footer.footer-area {
     line-height: 25px;
     margin-bottom: 20px;
 }
+
+.footer-icons li{
+    display: inline-flex;
+    margin-right: 15px;
+}
+
+.footer-icons a {
+    color: #FFFFFF;
+}
+
  
 .footer-area2,
 .footer-area3,
@@ -1409,15 +1456,23 @@ section.footer-copy {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin: 20px auto;
     }
 
     .form-headline button {
         margin:auto;
-        margin-top:20px;
+        /*margin-top:20px;*/
     }
 
     .call-action-video-headline {
         justify-content: center;
+    }
+}
+
+@media(max-width: 460px) {
+    .form-headline button {
+        position: static;
+        width: 100%;
     }
 }
 

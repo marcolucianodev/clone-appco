@@ -12,10 +12,17 @@ $menu.addEventListener('click', () => {
 })
 
 
-function abrirModal() {
-    let abm = document.querySelector('.bg-modal')
-    abm.style.top = '0'
-}
+const abrirModal = document.querySelectorAll('.btn-video')[1]
+abrirModal.addEventListener('click', () => {
+    const modalOpen = document.querySelector('.bg-modal')
+    modalOpen.style.top = '0'
+})
+
+const fecharModal = document.querySelector('.close')
+fecharModal.addEventListener('click', () => {
+    const closeModal = document.querySelector('.bg-modal')
+    closeModal.style.top = '-100%'
+})
 
 /*function fecharModal() {
     let fm = document.querySelector('.bg-modal')

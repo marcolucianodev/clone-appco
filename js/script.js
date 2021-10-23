@@ -1,4 +1,4 @@
-
+/*Menu Toggle Area*/
 const $menu = document.querySelector('.menuToggle')
 $menu.addEventListener('click', () => {
     const $menuOpen = document.querySelector('.menuMobile')
@@ -11,7 +11,7 @@ $menu.addEventListener('click', () => {
     }
 })
 
-
+/*Modal Area*/
 const abrirModal = document.querySelectorAll('.btn-video')[1]
 abrirModal.addEventListener('click', () => {
     const modalOpen = document.querySelector('.bg-modal')
@@ -25,17 +25,7 @@ fecharModal.addEventListener('click', () => {
 })
 
 
-/*const answer = document.querySelectorAll('.answer')
-const plus = document.querySelectorAll('plus')
-
-plus.addEventListener('click', () => {
-    const i = []
-    for(let n in i) {
-        answer[n]
-    }
-    alert(answer[])
-})*/
-
+/*Accordeon Area*/
 const accordion = document.querySelectorAll('.questions')
 for(i = 0; i < accordion.length; i++){
     accordion[i].addEventListener('click', function() {

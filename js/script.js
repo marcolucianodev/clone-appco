@@ -24,18 +24,21 @@ fecharModal.addEventListener('click', () => {
     closeModal.style.top = '-100%'
 })
 
-/*function fecharModal() {
-    let fm = document.querySelector('.bg-modal')
-    fm.style.top = '-100%'
-}
 
+/*const answer = document.querySelectorAll('.answer')
+const plus = document.querySelectorAll('plus')
 
-/*let abrirModal = document.querySelector('.btn-video')
-abrirModal.addEventListener('click', ()=>{
-    abrirModal.style.top = '0'
-})
-
-let fecharModal = document.querySelector('.close')
-fecharModal.addEventListener('click', ()=> {
-    fecharModal.style.top = '-100%'
+plus.addEventListener('click', () => {
+    const i = []
+    for(let n in i) {
+        answer[n]
+    }
+    alert(answer[])
 })*/
+
+const accordion = document.querySelectorAll('.questions')
+for(i = 0; i < accordion.length; i++){
+    accordion[i].addEventListener('click', function() {
+        this.classList.toggle('active')
+    })
+}

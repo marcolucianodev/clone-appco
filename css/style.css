@@ -72,7 +72,6 @@ header {
     background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1));;
     padding: 10px 2%;
     height: 65px;
-    position: sticky;
     top:0;
     left: 0;
     right: 0;
@@ -126,6 +125,7 @@ nav.menu a {
     right: 0;
     left: 0;
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -515,6 +515,7 @@ section.download-area {
     margin-right: 20px;
     background-color: #FFF;
     color: #6730E3;
+    border: 1px solid #FFF;
 }
 
 .btn-google:hover {
@@ -682,6 +683,7 @@ section.area-info {
 
 .questions {
     padding: 2%;
+    transition: all 1s ease;
 }
 
 .question {
@@ -714,9 +716,18 @@ span.plus {
     line-height: 30px;
     font-size: 15px;
     color: #707070;
-    padding: 20px;
+    padding: 0 20px;
     border: 1px solid #ebebeb;
     border-top: none;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.active .answer {
+    overflow: visible;
+    height: auto;
+    transition: all 1s ease;
 }
 
 section.clients-area {
@@ -1230,9 +1241,6 @@ section.partners {
     width: 92px;
 }
 
-
-
-
 section.subscribe {
     display:grid;
     grid-template-columns: 1fr;
@@ -1338,10 +1346,13 @@ footer.footer-area {
 
  
 .footer-area2,
-.footer-area3,
-.footer-area4 {
+.footer-area3 {
     flex: 1;
     padding: 0 2%;
+}
+
+.footer-area4 {
+    flex:1;
 }
 
 .footer-area2 h3,
@@ -1370,7 +1381,26 @@ footer.footer-area {
 .email,
 .url {
     margin-bottom: 20px;
+    font-size: 15px;
 }
+
+.icon {
+    margin-right: 5px;
+}
+
+.adreess {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-adreess {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
 
 .top-line {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1461,7 +1491,6 @@ section.footer-copy {
 
     .form-headline button {
         margin:auto;
-        /*margin-top:20px;*/
     }
 
     .call-action-video-headline {
@@ -1473,6 +1502,81 @@ section.footer-copy {
     .form-headline button {
         position: static;
         width: 100%;
+    }
+
+    .box-second-area-right img {
+        width: 250px;
+    }
+
+    .box-third-area-left img {
+        width: 250px;
+    }
+
+    .our-team img {
+        width: 360px;
+    }
+
+    .our-team li {
+        margin-bottom: 20px;
+    }
+
+    .contact-area-right form {
+        grid-template-columns: 1fr;
+    }
+
+    .formName,
+    .formEmail,
+    .formPhone,
+    .formCompany,
+    .formMessage {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .box-third-area-right h2 {
+        text-align: center;
+    }
+
+    .price-area-info {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 320px) {
+    .feature-boxes {
+        width: auto !important;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .box-second-area-left {
+        padding-right: 0;
+    }
+
+    .features {
+        display: block;
+        margin:5% auto;
+        text-align: center;
+    }
+
+    .box-second-area-right {
+        margin-top: 20px;
+    }
+
+    section.download-area {
+        padding: 100px 0 0;
+    }
+
+    .download-buttons button {
+        width: 90%;
+        margin: 3% auto;
+    }
+
+    section.news-area h2,
+    section.news-area p {
+        text-align: center;
     }
 }
 
@@ -1499,10 +1603,162 @@ section.footer-copy {
     .second-headline img {
         width:380px;
     }
+
+    .download-buttons {
+        flex-direction: column;
+    }
+
+    .btn-google,
+    .btn-apple {
+        width: 100%;
+    }
+
+    .btn-google {
+        margin-bottom: 20px;
+    }
+
+    .prices-area {
+        grid-template-columns: 1fr !important;
+        margin:0!important;
+    }
+
+    section.price-area p {
+        margin-bottom: 20px;
+    }
+
+    .form-subscribe {
+        flex-direction: column;
+    }
+
+    .form-subscribe button {
+        position: static;
+    }
+
+    .our-team img {
+        width: 260px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .content-inside-footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer.footer-area {
+        padding-top: 100px;
+    }
+
+    .footer-area1,
+    .footer-area2,
+    .footer-area3,
+    .footer-area4 {
+        margin-bottom: 30px;
+    }
+
+    .container-inside {
+        grid-template-columns: 1fr;
+    }
+
+    .download-area-left h2,
+    .download-area-left p {
+        text-align: center;
+    }
+
+    .download-buttons {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .download-area-right {
+        justify-content: center;
+    }
+
+    section.clients-area {
+        grid-template-columns: 1fr;
+    }
+
+    .clients-area-left {
+        margin-bottom: 50px;
+    }
+
+    .news {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    section.footer-copy .container {
+        flex-direction:column;
+    }
+
+    .copy {
+        order: 2;
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 730px){
+    .prices-area {
+        row-gap:20px;
+        grid-template-columns: 400px;
+        margin:5% auto;
+    }
+
+    .questions-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
     .features-box-area {
         grid-template-columns: 1fr;
+    }
+
+    .feature-boxes {
+        width: 350px;
+    }
+
+    section.second-area {
+        grid-template-columns: 1fr;
+    }
+
+    .box-second-area-left h2 {
+        text-align: center;
+    }
+
+    .box-second-area-right {
+        justify-content: center;
+    }
+
+    section.third-area {
+        grid-template-columns: 1fr;
+    }
+
+    .box-third-area-left {
+        justify-content: center;
+    }
+
+    .box-third-area-right {
+        margin-top: 50px;
+        padding: 5%;
+    }
+
+    section.contact-area {
+        padding: 9% 5%;
+    }
+
+    .content-inside-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .companies-partners li {
+        margin-top: 30px;
+    }
+
+    section.subscribe {
+        padding: 20px 2% 0;
     }
 }

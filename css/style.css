@@ -29,6 +29,19 @@ body {
 .modal {
     width: 60%;
     height: 50%;
+    position: relative;
+}
+
+.embed {
+    position: relative;
+    width: 100%;
+}
+
+.embed iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-bottom: 56.25%;
 }
 
 span.close {
@@ -38,6 +51,9 @@ span.close {
     margin: 10px 20px;
     cursor: pointer;
     padding:2px 8px;
+    position: absolute;
+    top:-50px;
+    right: 0;
 }
 
 span.close:hover {

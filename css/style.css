@@ -27,14 +27,18 @@ body {
 }
 
 .modal {
-    width: 60%;
-    height: 50%;
-    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .embed {
-    position: relative;
-    width: 100%;
+    background-color: #000;
+    width: 50%;
+    height: 50%;
 }
 
 .embed iframe {
@@ -44,19 +48,15 @@ body {
     padding-bottom: 56.25%;
 }
 
-span.close {
-    float: right;
+.close {
     font-size: 22px;
     color: #FFFFFF;
     margin: 10px 20px;
     cursor: pointer;
     padding:2px 8px;
-    position: absolute;
-    top:-50px;
-    right: 0;
 }
 
-span.close:hover {
+.close:hover {
     background-color: #FF0000;
     padding:2px 8px;
 }
@@ -1277,7 +1277,7 @@ section.subscribe {
     margin: 0 auto;
     width: 100%;
     position: relative;
-    z-index: 999;
+    z-index: 2;
 }
 
 .form-subscribe input#email {

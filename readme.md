@@ -11,3 +11,4 @@
   <li>CSS</li>
   <li>Javascript</li>
   </ul>
+  <p>OBS: Alguns ajustes de interação com JS ainda estão em produção.</p>

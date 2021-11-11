@@ -1639,6 +1639,10 @@ section.footer-copy {
         width: 100%;
     }
 
+    .download-buttons button {
+        margin: 0;
+    }
+
     .btn-google {
         margin-bottom: 20px;
     }

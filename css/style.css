@@ -148,6 +148,8 @@ nav.menu a {
     align-items: center;
     background-image: linear-gradient(to right, rgba(32, 40, 119, 1), rgba(55, 46, 149, 1), rgba(83, 49, 177, 1), rgba(114, 48, 205, 1), rgba(150, 41, 230, 1));;
     display:none;
+    gap: 20px;
+    padding-bottom: 50px;
 }
 
 .menuMobile a {
@@ -513,7 +515,7 @@ section.download-area {
 .btn-google,
 .btn-apple {
     padding: 15px 20px;
-    width: 160px;
+    width: max-content;
     font-size: 17px;
     border-radius: 30px;
     border:none;
@@ -1560,6 +1562,22 @@ section.footer-copy {
     .price-area-info {
         flex-direction: column;
     }
+
+    .download-buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn-google {
+        margin-right: 0;
+    }
+
+    .btn-google, 
+    .btn-apple {
+        width: 100%;
+    }
 }
 
 @media (max-width: 410px) {
@@ -1628,6 +1646,11 @@ section.footer-copy {
 
     .second-headline img {
         width:380px;
+    }
+
+    .download-area-left {
+        align-items: center;
+        padding: 0 2%;
     }
 
     .download-buttons {

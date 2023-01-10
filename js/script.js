@@ -32,3 +32,11 @@ for(i = 0; i < accordion.length; i++){
         this.classList.toggle('active')
     })
 }
+
+//Slider Area
+const prev = document.querySelector(".arrow-prev")
+const next = document.querySelector(".arrow-next")
+
+prev.addEventListener("click", () => {
+    classList.add('')
+})

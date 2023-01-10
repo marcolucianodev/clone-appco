@@ -175,7 +175,6 @@ section.headline {
 }
 
 .first-headline {
-    padding: 15px;
     z-index: 1;
     padding-bottom: 60px;
 }
@@ -445,14 +444,18 @@ section.third-area {
     margin-top: 30px;
 }
 
-.third-area-icons ul li {
+.third-area-icons ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
+
+
 .third-area-icons li {
-    display: inline-flex;
-    margin-right: 30px;
-    padding:15px;
+    padding: 15px;
     width: 65px;
     height: 65px;
     box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.15);
@@ -790,12 +793,12 @@ section.clients-area {
     width: 102px;
 }
 
-.clients-area-right {
+/* .clients-area-right {
     display: flex;
     flex-direction: column;
     padding: 0 3%;
     justify-content: flex-end;
-}
+} */
 
 .client-header {
     display: flex;
@@ -832,6 +835,101 @@ section.clients-area {
     width: 17px;
     margin-right: 10px;
 }
+
+/* Estilos do Slider */
+
+.clients-area-right  {
+    margin: 0 auto;
+    /* width: 800px; */
+    width: 480px;
+    /* height: 400px; */
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .clients { /*estilo da área onde contém o conteúdo do slider*/
+    width: 400%;
+    height: 200px;
+    display: flex;
+  }
+  
+  .clients input {
+    display: none;
+  }
+
+  .testimonial-area { /*estilo de cada item(conteúdo) do slider*/
+    width: 25%;
+    position: relative;
+    transition: 1s;
+  }
+
+  .manual-navigation {
+    position: absolute;
+    /* width: 800px; */
+    width: 480px;
+    display: flex;
+    justify-content: center;
+    /* margin-top: -40px; */
+  }
+
+  .btn-manual {
+    border: 2px solid #6730E3;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .btn-manual:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  .btn-manual:hover {
+    /* background-color: rgba(255, 255, 255, 0.6); */
+    background-color: #6730E3;
+  }
+
+  #radio1:checked ~ .first {
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first {
+    margin-left: -25%;
+  }
+  
+  #radio3:checked ~ .first {
+    margin-left: -50%;
+  }
+  
+  #radio4:checked ~ .first {
+    margin-left: -75%;
+  }
+
+  .auto-navigation {
+    display: flex;
+    justify-content: center;
+    width: 480px;
+    position: absolute;
+    margin-top: 200px;
+  }
+  
+  .auto-navigation div {
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .auto-navigation div:not(:last-child){
+    margin-right: 30px;
+  }
+  
+  #radio1:checked ~ .auto-navigation .btn-auto1,
+  #radio2:checked ~ .auto-navigation .btn-auto2,
+  #radio3:checked ~ .auto-navigation .btn-auto3,
+  #radio4:checked ~ .auto-navigation .btn-auto4 {
+    background-color: #fff;
+  }
+
+/* FIM */
 
 .arrows {
     display: flex;
@@ -1430,6 +1528,11 @@ section.footer-copy {
     padding:20px 2%;
 }
 
+section.footer-copy a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 .footer-links li{
     list-style: none;
     display: inline-flex;
@@ -1456,6 +1559,76 @@ section.footer-copy {
 
 
 /*RESPONSIVO*/
+
+@media (max-width: 1023px) {
+    section.clients-area {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        width: 100%;
+    }
+
+    .clients-area-right {
+        width: 70%;
+    }
+
+    .manual-navigation {
+        width: 70%;
+    }
+
+    .auto-navigation {
+        width: 70%;
+    }
+}
+
+@media (max-width: 690px) {
+    .clients-area-right {
+        width: 100%;
+    }
+
+    .testimonial-area {
+        padding: 0 1%;
+    }
+
+    .manual-navigation {
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+    }
+
+    .auto-navigation {
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 520px) {
+    .clients-area-right {
+        height: 240px;
+    }
+
+    .manual-navigation {
+        margin-top: 40px;
+    }
+
+    .auto-navigation {
+        margin-top: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clients-area-right {
+        height: auto;
+    }
+
+    .clients {
+        height: auto;
+    }
+
+    .auto-navigation {
+       display: none;
+    }
+}
 
 @media (max-width: 960px){
     .headerArea {
@@ -1802,6 +1975,11 @@ section.footer-copy {
         margin-top: 50px;
         padding: 5%;
     }
+
+    .third-area-icons {
+        justify-content: center;        
+    } 
+
 
     section.contact-area {
         padding: 9% 5%;

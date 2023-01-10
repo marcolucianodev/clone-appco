@@ -769,6 +769,7 @@ section.clients-area {
     font-family: var(--fonteTitulos);
     font-weight: 600;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .clients-area p {
@@ -783,11 +784,20 @@ section.clients-area {
     align-items: center;
 }
 
-.clients-brands li {
+.clients-brands ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+}
+
+/* .clients-brands li {
     list-style: none;
     display: inline-flex;
     margin-right: 20px;
-}
+} */
 
 .clients-brands img {
     width: 102px;

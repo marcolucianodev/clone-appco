@@ -34,9 +34,18 @@ for(i = 0; i < accordion.length; i++){
 }
 
 //Slider Area
-const prev = document.querySelector(".arrow-prev")
-const next = document.querySelector(".arrow-next")
+let counter = 1;
+document.querySelector("#radio1").checked = true;
 
-prev.addEventListener("click", () => {
-    classList.add('')
-})
+setInterval(() => {
+  nextImage();
+}, 5000)
+
+const nextImage = () => {
+  counter++;
+  if(counter > 4) {
+    counter = 1
+  }
+
+  document.querySelector(`#radio${counter}`).checked = true;
+}

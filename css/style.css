@@ -3,6 +3,10 @@
     --fontContent: 'Open Sans', sans-serif; /*300 400*/
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--fontContent);
 }

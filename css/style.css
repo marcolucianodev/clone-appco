@@ -1455,9 +1455,13 @@ footer.footer-area {
     padding: 0 2%;
 }
 
-.footer-area1 img {
+.footer-area1 .logo-footer {
     width: 120px;
     margin-bottom: 20px;
+}
+
+.footer-area1 img {
+    width: inherit;
 }
 
 .footer-area1 p {
